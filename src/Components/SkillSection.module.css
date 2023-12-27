@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
+.skillCont{
+    max-width: 1200px;
+    /* background-color: skyblue; */
+    margin: auto;
+    padding: 80px 0;
+}
+.skillCont h2{
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    color: #002D62;
+    margin-bottom: 40px ;
+}
+.skillIcons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.icon{
+    font-size: 50px;
+    margin: 10px 15px;
+    /* box-shadow: 0 0 10px #002D62; */
+    /* color: red; */
+}
+.icon:nth-child(1){
+    color: #e34c26;
+}
+.icon:nth-child(2){
+    color: #264de4;
+}
+.icon:nth-child(3){
+    color: #FFFF00;
+}
+.icon:nth-child(4){
+    color: #7E11F8;
+}
+.icon:nth-child(5){
+    color: #149ECA;
+}
+.icon:nth-child(6){
+    color: #419732;
+}
+.icon:nth-child(7){
+    color: #529F41;
+}
