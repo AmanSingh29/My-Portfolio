@@ -41,6 +41,9 @@ const SkillSection = () => {
             <SiExpress />
           </div>
         </div>
+        <div className={styles.btn}>
+          <button>Know More</button>
+        </div>
       </div>
     </>
   );

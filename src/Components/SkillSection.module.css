@@ -5,7 +5,7 @@
     max-width: 1200px;
     /* background-color: skyblue; */
     margin: auto;
-    padding: 80px 0;
+    padding: 50px 0;
 }
 .skillCont h2{
     text-align: center;
@@ -47,4 +47,54 @@
 }
 .icon:nth-child(7){
     color: #529F41;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.btn button{
+    outline: none;
+    margin: 15px 0;
+    padding: 8px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s;
+    font-weight: 500;
+    background-color: #002D62;
+    color: #F0F8FF;
+    border: 3px solid #F0F8FF;
+}
+.btn button:hover{
+    background-color: #F0F8FF;
+    color: #002D62;
+    border: 3px solid #002D62;
+    box-shadow: -5px 5px 8px #002D62;
+}
+
+/* ======================== Media Queries ==========================
+================================================================= */
+
+@media only screen and (max-width: 700px){
+    .skillCont{
+        padding: 30px 0;
+    }
+}
+@media only screen and (max-width: 550px){
+    .skillCont{
+        padding: 20px 0;
+    }
+    .skillCont h2{
+        font-size: 35px;
+        margin-bottom: 30px ;
+    }
+}
+@media only screen and (max-width: 500px){
+    .btn{
+        margin-top: 5px;
+    }
 }
