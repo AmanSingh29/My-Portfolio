@@ -1,7 +1,7 @@
 import React from "react";
 import myImage from "../Images/IMG_20231224_180855.png";
 import Typed from "react-typed";
-import styles from "./HeroSection.module.css";
+import styles from "../Styles/HeroSection.module.css";
 import Resume from "../Images/Resume.pdf";
 
 const HeroSection = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { ClockLoader } from "react-spinners";
-import styles from "./Loader.module.css";
+import styles from "../Styles/Loader.module.css";
 
 const Loader = () => {
   return (

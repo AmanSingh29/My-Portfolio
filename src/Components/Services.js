@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Services.module.css";
+import styles from "../Styles/Services.module.css";
 import { CgWebsite } from "react-icons/cg";
 import { IoCodeSlashSharp } from "react-icons/io5";
 import { ImCodepen } from "react-icons/im";

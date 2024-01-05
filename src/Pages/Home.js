@@ -4,6 +4,7 @@ import HeroSection from "../Components/HeroSection";
 import AboutSection from "../Components/AboutSection";
 import SkillSection from "../Components/SkillSection";
 import Services from "../Components/Services";
+import ProjectCounter from "../Components/ProjectCounter";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ const Home = () => {
           <HeroSection />
           <AboutSection />
           <SkillSection />
+          <ProjectCounter />
           <Services />
         </>
       )}

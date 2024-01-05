@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SkillSection.module.css";
+import styles from "../Styles/SkillSection.module.css";
 import { FaHtml5, FaCss3 } from "react-icons/fa";
 import {
   SiJavascript,
