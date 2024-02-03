@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../Styles/Services.module.css";
 import { CgWebsite } from "react-icons/cg";
 import { IoCodeSlashSharp } from "react-icons/io5";
 import { ImCodepen } from "react-icons/im";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
+import Aos from "aos";
 
 const Services = () => {
+  useEffect(() => {
+    Aos.init({
+      delay: 50,
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
       <div className={styles.serviceMain}>
         <h2>My Services</h2>
         <div className={styles.servicesCont}>
-          <div className={styles.service}>
+          <div className={styles.service} data-aos="fade-right">
             <div className={styles.icon}>
               <CgWebsite />
             </div>
@@ -21,7 +29,7 @@ const Services = () => {
               because we do not dare that they are difficult.”
             </div>
           </div>
-          <div className={styles.service}>
+          <div className={styles.service} data-aos="fade-left">
             <div className={styles.icon}>
               <IoCodeSlashSharp />
             </div>
@@ -31,7 +39,7 @@ const Services = () => {
               because we do not dare that they are difficult.”
             </div>
           </div>
-          <div className={styles.service}>
+          <div className={styles.service} data-aos="fade-right">
             <div className={styles.icon}>
               <ImCodepen />
             </div>
@@ -41,7 +49,7 @@ const Services = () => {
               because we do not dare that they are difficult.”
             </div>
           </div>
-          <div className={styles.service}>
+          <div className={styles.service} data-aos="fade-left">
             <div className={styles.icon}>
               <LiaLaptopCodeSolid />
             </div>

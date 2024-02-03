@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../Styles/AboutSection.module.css";
 import Image from "../Images/aboutSec.png";
+import Aos from "aos";
 
 const AboutSection = () => {
+  useEffect(() => {
+    Aos.init({
+      delay: 50,
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
       <div className={styles.aboutSecCont}>
-        <div className={styles.aboutSecImage}>
+        <div className={styles.aboutSecImage} data-aos="zoom-in">
           <img src={Image} alt="about-image" />
         </div>
-        <div className={styles.aboutSecDetails}>
+        <div className={styles.aboutSecDetails} data-aos="fade-left">
           <div className={styles.aboutHeading}>
             <h2>About Me</h2>
           </div>

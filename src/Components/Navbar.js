@@ -13,10 +13,10 @@ const Navbar = () => {
         <div className="nav-links">
           <nav>
             <ul>
-              <NavLink to={"#"}>HOME</NavLink>
+              <NavLink to={"/"}>HOME</NavLink>
               <NavLink to={"#"}>ABOUT</NavLink>
               <NavLink to={"#"}>PROJECTS</NavLink>
-              <NavLink to={"#"}>CONTACT</NavLink>
+              <NavLink to={"/contact"}>CONTACT</NavLink>
             </ul>
           </nav>
         </div>
@@ -28,10 +28,10 @@ const Navbar = () => {
       <div id="slide-bar" className={slide ? "slide" : ""}>
         <nav>
           <ul>
-            <NavLink to={"#"}>HOME</NavLink>
+            <NavLink to={"/"}>HOME</NavLink>
             <NavLink to={"#"}>ABOUT</NavLink>
             <NavLink to={"#"}>PROJECTS</NavLink>
-            <NavLink to={"#"}>CONTACT</NavLink>
+            <NavLink to={"/contact"}>CONTACT</NavLink>
           </ul>
         </nav>
       </div>

@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import myImage from "../Images/IMG_20231224_180855.png";
 import Typed from "react-typed";
 import styles from "../Styles/HeroSection.module.css";
 import Resume from "../Images/Resume.pdf";
 
 const HeroSection = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
+
   return (
     <>
       <div className={styles.heroCont}>
-        <div className={styles.heroDetail}>
+        <div
+          className={`${styles.heroDetail} ${
+            animate && styles.animateHeroDetails
+          }`}
+        >
           <div className={styles.heroPara}>
             <span>T</span>
             <span>his is me</span>
@@ -40,7 +50,7 @@ const HeroSection = () => {
             <button>Hire Me</button>
           </div>
         </div>
-        <div className={styles.heroImage}>
+        <div className={`${styles.heroImage} ${animate && styles.animateImg}`}>
           <img src={myImage} />
         </div>
       </div>

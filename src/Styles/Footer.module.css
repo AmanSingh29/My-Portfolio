@@ -1,94 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap");
 
-.footContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 330px;
-    color: aliceblue;
-    position: relative;
-    margin-top: 80px;
-    background-color: #002D62;
+.footContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 330px;
+  color: aliceblue;
+  position: relative;
+  margin-top: 80px;
+  background-color: #002d62;
 }
-.floatFooter{
-    position: absolute;
-    top: -70px;
-    background-color: #7CB9E8;
-    border-radius: 20px;
-    box-shadow: 0 0 15px #7CB9E8;
-    width: 80%;
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.floatFooter {
+  position: absolute;
+  top: -70px;
+  background-color: #7cb9e8;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #7cb9e8;
+  width: 80%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.floatFooter p:nth-child(1){
-    font-size: 30px;
-    font-weight: 500;
-    color: #002D62;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.floatFooter p:nth-child(1) {
+  font-size: 30px;
+  font-weight: 500;
+  color: #002d62;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.floatFooter p:nth-child(2){
-    font-size: 20px;
-    color: rgb(71, 70, 70);
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.floatFooter p:nth-child(2) {
+  font-size: 20px;
+  color: rgb(71, 70, 70);
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.floatBtn button{
-    outline: none;
-    cursor: pointer;
-    font-size: 17px;
-    padding: 8px 13px;
-    background-color: #002D62;
-    color: aliceblue;
-    border: none;
-    transition: all 0.2s;
+.floatBtn button {
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 8px 13px;
+  border-radius: 5px;
+  background-color: #002d62;
+  color: aliceblue;
+  border: none;
+  transition: all 0.2s;
 }
-.floatBtn button:hover{
-    background-color: aliceblue;
-    color: #002D62;
-    box-shadow: 0 0 10px #002D62;
+.floatBtn button:hover {
+  background-color: aliceblue;
+  color: #002d62;
+  box-shadow: 0 0 10px #002d62;
 }
-.socialMedia{
-    margin: 15px 0;
+.socialMedia {
+  margin: 15px 0;
 }
-.links{
-    margin: 15px 0;
+.links {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.socialMedia a{
-    color: aliceblue;
-    margin: 0 15px;
-    font-size: 25px;
+.socialMedia a {
+  color: aliceblue;
+  margin: 0 15px;
+  font-size: 25px;
 }
-.links a{
-    color: aliceblue;
-    margin: 0 15px;
-    font-family: 'Mulish', 'sans-serif';
-    text-transform: uppercase;
-    font-size: 18px;
+.links a {
+  color: aliceblue;
+  margin: 0 15px;
+  font-family: "Mulish", "sans-serif";
+  text-transform: uppercase;
+  font-size: 18px;
 }
-.footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
 }
-.copyright p{
-    font-size: 18px;
-    color: aliceblue;
-    font-family: 'Courier New', Courier, monospace;
+.copyright p {
+  font-size: 18px;
+  text-align: center;
+  color: aliceblue;
+  font-family: "Courier New", Courier, monospace;
 }
-.copyright{
-    margin-top: 10px;
+.copyright {
+  margin-top: 10px;
 }
-.heart{
-    color: red;
+.heart {
+  color: red;
+  font-size: 22px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+hr {
+  width: 80vw;
+}
+
+/* ======================== Animation ==========================
+================================================================= */
+
+@keyframes heart {
+  0% {
     font-size: 22px;
-    margin-top: 4px;
-    cursor: pointer;
+  }
+  50% {
+    font-size: 27px;
+  }
+  100% {
+    font-size: 22px;
+  }
 }
-hr{
-    width: 80vw;
+
+.heart {
+  color: red;
+  font-size: 22px;
+  margin-top: 4px;
+  position: absolute;
+  bottom: 12px;
+  cursor: pointer;
+  animation: heart 0.6s infinite ease-out;
+}
+
+/* ======================== Media Queries ==========================
+================================================================= */
+
+@media only screen and (max-width: 980px) {
+  .floatFooter {
+    top: -50px;
+    width: 75%;
+    height: 110px;
+    justify-content: space-between;
+    padding: 0 25px;
+  }
+  .floatFooter p:nth-child(1) {
+    font-size: 25px;
+  }
+  .floatFooter p:nth-child(2) {
+    font-size: 18px;
+  }
+  .floatBtn button {
+    font-size: 15px;
+    padding: 6px 12px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .floatFooter {
+    width: 80%;
+    height: 100px;
+  }
+  .footContainer {
+    height: 300px;
+  }
+  .footer {
+    margin-top: 55px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .footer {
+    margin-top: 30px;
+  }
+  .floatFooter {
+    top: -50px;
+    width: 85%;
+    height: 90px;
+    padding: 0 25px;
+  }
+  .floatFooter p:nth-child(1) {
+    font-size: 22px;
+  }
+  .floatFooter p:nth-child(2) {
+    font-size: 16px;
+  }
+  .floatBtn button {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+  .footContainer {
+    height: 250px;
+  }
+  .socialMedia {
+    margin: 10px 0;
+  }
+  .socialMedia a {
+    margin: 0 10px;
+    font-size: 22px;
+  }
+  .links {
+    margin: 10px 0;
+  }
+  .links a {
+    margin: 0 12px;
+    font-size: 16px;
+  }
+  .copyright p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .floatFooter {
+    top: -35px;
+    width: 90%;
+    height: 80px;
+  }
+  .floatFooter p:nth-child(1) {
+    font-size: 20px;
+  }
+  .floatFooter p:nth-child(2) {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .heart {
+    bottom: 6px;
+  }
+  .links {
+    margin: 10px 0;
+  }
+  .links a {
+    margin: 0 8px;
+    font-size: 15px;
+  }
+  .floatFooter {
+    height: 70px;
+    padding: 0 18px;
+  }
+  .floatFooter p:nth-child(1) {
+    font-size: 18px;
+  }
+  .floatFooter p:nth-child(2) {
+    font-size: 13px;
+  }
+  .floatBtn button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 }
