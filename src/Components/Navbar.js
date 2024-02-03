@@ -15,7 +15,7 @@ const Navbar = () => {
             <ul>
               <NavLink to={"/"}>HOME</NavLink>
               <NavLink to={"#"}>ABOUT</NavLink>
-              <NavLink to={"#"}>PROJECTS</NavLink>
+              <NavLink to={"/projects"}>PROJECTS</NavLink>
               <NavLink to={"/contact"}>CONTACT</NavLink>
             </ul>
           </nav>
@@ -28,10 +28,18 @@ const Navbar = () => {
       <div id="slide-bar" className={slide ? "slide" : ""}>
         <nav>
           <ul>
-            <NavLink to={"/"}>HOME</NavLink>
-            <NavLink to={"#"}>ABOUT</NavLink>
-            <NavLink to={"#"}>PROJECTS</NavLink>
-            <NavLink to={"/contact"}>CONTACT</NavLink>
+            <NavLink to={"/"} onClick={() => setSlide(false)}>
+              HOME
+            </NavLink>
+            <NavLink to={"#"} onClick={() => setSlide(false)}>
+              ABOUT
+            </NavLink>
+            <NavLink to={"/projects"} onClick={() => setSlide(false)}>
+              PROJECTS
+            </NavLink>
+            <NavLink to={"/contact"} onClick={() => setSlide(false)}>
+              CONTACT
+            </NavLink>
           </ul>
         </nav>
       </div>

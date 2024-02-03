@@ -6,6 +6,13 @@ import { GrLinkedin } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={styles.footContainer}>
       <div className={styles.floatFooter}>
@@ -33,10 +40,16 @@ const Footer = () => {
           </Link>
         </div>
         <div className={styles.links}>
-          <Link>Home</Link>
-          <Link>About</Link>
-          <Link>Projects</Link>
-          <Link>Contact Us</Link>
+          <Link to={"/"} onClick={scrollToTop}>
+            Home
+          </Link>
+          <Link onClick={scrollToTop}>About</Link>
+          <Link to={"/projects"} onClick={scrollToTop}>
+            Projects
+          </Link>
+          <Link to={"/contact"} onClick={scrollToTop}>
+            Contact Us
+          </Link>
         </div>
         <hr />
         <div className={styles.copyright}>

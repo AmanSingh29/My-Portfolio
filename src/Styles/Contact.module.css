@@ -1,3 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600;6..12,700;6..12,800;6..12,900&display=swap");
+
+.contactHeading > h2 {
+  font-size: 50px;
+  color: #002d62;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+}
+.contactSmallHead {
+  display: flex;
+  align-items: center;
+}
+.contactSmallHead > div {
+  font-size: 25px;
+  color: rgb(228, 167, 53);
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactSmallHead > h2 {
+  font-size: 33px;
+  color: #002d62;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+}
+.detail {
+  font-size: 18px;
+  font-family: "Nunito Sans", sans-serif;
+}
+.icon {
+  margin-right: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .contactCont {
   max-width: 1100px;
   display: flex;
@@ -9,14 +46,14 @@
 .contactForm {
   width: 50%;
   background-color: #fbfdff;
-  border: 0.5px solid rgb(224, 221, 221);
-  /* box-shadow: 0 0 20px #002d62; */
+  border: none;
+  box-shadow: 0 0 30px 20px #e9f2f9;
   padding: 40px;
   border-radius: 20px;
 }
 .contactDetails {
-  width: 45%;
-  background-color: lightcoral;
+  width: 40%;
+  /* background-color: rgb(250, 217, 217); */
 }
 .contactForm form {
   display: flex;
@@ -25,13 +62,129 @@
 .personalDetails > div {
   display: flex;
   align-items: center;
+  margin: 8px 0;
 }
 .contactForm form input,
 .contactForm form textarea {
   outline: none;
-  border: 1px solid #002d62;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f8ff;
   width: 100%;
   margin: 10px 0;
-  padding: 7px 10px;
+  padding: 15px 10px;
   font-size: 17px;
+}
+textarea {
+  font-size: 18px !important;
+}
+.msgIcon {
+  text-align: center;
+  font-size: 80px;
+  color: #002d62;
+}
+.submitBtn {
+  width: 150px;
+  outline: none;
+  border: none;
+  background-color: #002d62;
+  padding: 8px 13px;
+  font-size: 17px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.map {
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgb(211, 205, 205);
+  height: 50vh;
+  margin-bottom: 180px;
+}
+.errorMsg {
+  /* text-align: center; */
+  color: red;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  margin: 5px;
+}
+
+/* ======================== Media Queries ==========================
+================================================================= */
+@media only screen and (max-width: 1000px) {
+  .map {
+    margin: 0 50px;
+    margin-bottom: 160px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .contactForm {
+    padding: 25px;
+  }
+  .msgIcon {
+    font-size: 60px;
+  }
+  .map {
+    margin-bottom: 120px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .contactCont {
+    justify-content: center;
+    padding: 50px 0;
+    flex-direction: column;
+  }
+  .contactForm {
+    width: 75%;
+    padding: 40px;
+  }
+  .contactDetails {
+    width: 75%;
+    margin-bottom: 30px;
+  }
+  .map {
+    margin: 0 30px;
+    margin-bottom: 110px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .map {
+    height: 45vh;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .contactForm {
+    width: 90%;
+    padding: 40px;
+  }
+  .contactDetails {
+    width: 80%;
+  }
+  .map {
+    margin: 0 20px;
+    margin-bottom: 90px;
+    height: 40vh;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .contactForm {
+    padding: 20px;
+  }
+  .contactDetails {
+    width: 90%;
+  }
+  .contactHeading > h2 {
+    font-size: 42px;
+  }
+  .contactSmallHead > h2 {
+    font-size: 28px;
+  }
+  .submitBtn {
+    width: 130px;
+    padding: 6px 10px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
 }
