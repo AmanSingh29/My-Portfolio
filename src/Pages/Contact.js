@@ -7,12 +7,14 @@ import { TbMessageDots } from "react-icons/tb";
 import { LiaHandshake } from "react-icons/lia";
 import { PulseLoader } from "react-spinners";
 import Aos from "aos";
+import SuccessMsgModal from "../Components/SuccessMsgModal";
 
 const Contact = () => {
   const [loading, setLoading] = useState(true);
   const [msgLoad, setMsgLoad] = useState(false);
   const [errMsg, setErrMsg] = useState("");
   const [showErrMsg, setShowErrMsg] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     Aos.init({
@@ -43,7 +45,6 @@ const Contact = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.error) {
           setErrMsg(data.error);
           setShowErrMsg(true);
@@ -70,6 +71,17 @@ const Contact = () => {
         <Loader />
       ) : (
         <>
+          {showModal ? (
+            <div
+              className={styles.successModelCont}
+              onClick={() => setShowModal(false)}
+            >
+              <SuccessMsgModal />
+            </div>
+          ) : (
+            ""
+          )}
+
           <div className={styles.contactCont}>
             <div className={styles.contactDetails} data-aos="fade-right">
               <div className={styles.contactHeading}>
@@ -104,7 +116,7 @@ const Contact = () => {
             </div>
             <div className={styles.contactForm} data-aos="zoom-out">
               <div className={styles.msgIcon}>
-                <TbMessageDots />
+                <TbMessageDots onClick={() => setShowModal(true)} />
               </div>
               <form onSubmit={handleSubmitForm}>
                 <input

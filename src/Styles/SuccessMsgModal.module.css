@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600;6..12,700;6..12,800;6..12,900&display=swap");
+
+.successModel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  z-index: 3;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 15px 2px #ffffff;
+}
+
+.tickLogo {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #37e030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -12%;
+  left: 40%;
+  font-size: 50px;
+  color: #ffffff;
+  box-shadow: 0 0 15px 5px #7ceb78;
+}
+.successHeading {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Nunito Sans", sans-serif;
+  margin: 25px 0;
+}
+
+.successText > p {
+  text-align: center;
+  font-size: 18px;
+  /* margin: 3px 0; */
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.successBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.successBtn > button {
+  outline: none;
+  border: none;
+  background-color: #37e030;
+  color: #ffffff;
+  padding: 3px 10px;
+  width: 50%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}

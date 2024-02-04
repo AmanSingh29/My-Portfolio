@@ -111,6 +111,16 @@ textarea {
   margin: 5px;
 }
 
+.successModelCont {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+}
+
 /* ======================== Media Queries ==========================
 ================================================================= */
 @media only screen and (max-width: 1000px) {
