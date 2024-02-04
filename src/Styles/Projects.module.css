@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600;6..12,700;6..12,800;6..12,900&display=swap");
+
+.projectsMainCont {
+  max-width: 1000px;
+  margin: auto;
+  padding: 8vh 0;
+}
+.projectsHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectsHeading > h1 {
+  font-size: 45px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  color: #002d62;
+}
+.projectsHeading span {
+  font-size: 35px;
+  margin-left: 10px;
+  padding-top: 12px;
+}
+.projectCont {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin-top: 15vh;
+  margin-bottom: 8vh;
+}
+.projectImg {
+  width: 48%;
+  height: 300px;
+  box-shadow: 0 0 5px 1px #d1d2d3;
+}
+.projectImg img {
+  width: 100%;
+  height: 100%;
+}
+.projectDetails {
+  width: 47%;
+}
+.projectTitle h3 {
+  font-size: 35px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  color: #002d62;
+  margin-bottom: 20px;
+}
+.projectDescription p {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: rgb(97, 97, 97);
+  margin: 4px 0;
+}
+.projectLinks {
+  margin-top: 15px;
+}
+.linkButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.linkButtons a {
+  font-size: 30px;
+  color: #002d62;
+  margin: 0 15px;
+}
+.handIcon {
+  color: rgb(234, 154, 7);
+  margin-right: 5px;
+}
+.reverse {
+  flex-direction: row-reverse;
+  margin: 15vh 0;
+}
+
+/* ======================== Media Queries ==========================
+================================================================= */
+@media only screen and (max-width: 800px) {
+  .projectImg {
+    width: 50%;
+    height: 280px;
+  }
+  .projectDetails {
+    width: 45%;
+  }
+  .projectTitle h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .projectDescription p {
+    font-size: 14px;
+    margin: 3px 0;
+  }
+  .linkButtons a {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .projectCont {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+  }
+  .projectImg {
+    width: 80%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .projectDetails {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .projectCont {
+    margin-top: 8vh;
+    margin-bottom: 0;
+  }
+  .projectImg {
+    width: 95%;
+  }
+  .projectDetails {
+    width: 90%;
+  }
+  .projectsHeading > h1 {
+    font-size: 35px;
+  }
+  .projectsHeading span {
+    font-size: 30px;
+  }
+}

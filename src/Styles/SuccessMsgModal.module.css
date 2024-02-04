@@ -39,7 +39,6 @@
 .successText > p {
   text-align: center;
   font-size: 18px;
-  /* margin: 3px 0; */
   font-family: "Nunito Sans", sans-serif;
 }
 
@@ -61,4 +60,42 @@
   margin-top: 30px;
   font-weight: 600;
   cursor: pointer;
+}
+
+/* ======================== Media Queries ==========================
+================================================================= */
+@media only screen and (max-width: 450px) {
+  .successModel {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+  }
+
+  .tickLogo {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: -15%;
+    font-size: 40px;
+  }
+  .successHeading {
+    font-size: 28px;
+    margin: 15px 0;
+  }
+
+  .successText > p {
+    font-size: 15px;
+  }
+  .successBtn > button {
+    padding: 3px 0px;
+    width: 40%;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .successModel {
+    width: 280px;
+  }
 }

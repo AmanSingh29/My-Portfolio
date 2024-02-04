@@ -1,16 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "../Styles/SuccessMsgModal.module.css";
 import { TiTickOutline } from "react-icons/ti";
-import Aos from "aos";
 
-const SuccessMsgModal = () => {
-  useEffect(() => {
-    Aos.init({
-      delay: 50,
-      duration: 1000,
-    });
-  }, []);
-
+const SuccessMsgModal = ({ closeModal }) => {
   return (
     <div className={styles.successModel}>
       <div className={styles.tickLogo}>
@@ -22,7 +14,7 @@ const SuccessMsgModal = () => {
         <p>Thankyou For Connecting.</p>
       </div>
       <div className={styles.successBtn}>
-        <button>Ok</button>
+        <button onClick={() => closeModal()}>Ok</button>
       </div>
     </div>
   );

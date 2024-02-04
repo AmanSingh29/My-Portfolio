@@ -30,6 +30,15 @@ const Contact = () => {
   const mailRef = useRef();
   const msgRef = useRef();
 
+  const handleError = function (errMsg) {
+    setErrMsg(errMsg);
+    setShowErrMsg(true);
+    setMsgLoad(false);
+    setTimeout(() => {
+      setShowErrMsg(false);
+    }, 4000);
+  };
+
   const handleSubmitForm = (e) => {
     e.preventDefault();
     setMsgLoad(true);
@@ -46,23 +55,23 @@ const Contact = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
-          setErrMsg(data.error);
-          setShowErrMsg(true);
-          setMsgLoad(false);
-          setTimeout(() => {
-            setShowErrMsg(false);
-          }, 4000);
+          handleError(data.error);
           return;
         }
+        setShowModal(true);
         nameRef.current.value = "";
         mailRef.current.value = "";
         msgRef.current.value = "";
         setMsgLoad(false);
       })
       .catch((err) => {
-        console.log(err);
+        handleError("Please Check Your Connection !");
         setMsgLoad(false);
       });
+  };
+
+  const closeModal = function () {
+    setShowModal(false);
   };
 
   return (
@@ -76,7 +85,7 @@ const Contact = () => {
               className={styles.successModelCont}
               onClick={() => setShowModal(false)}
             >
-              <SuccessMsgModal />
+              <SuccessMsgModal closeModal={closeModal} />
             </div>
           ) : (
             ""
@@ -116,7 +125,7 @@ const Contact = () => {
             </div>
             <div className={styles.contactForm} data-aos="zoom-out">
               <div className={styles.msgIcon}>
-                <TbMessageDots onClick={() => setShowModal(true)} />
+                <TbMessageDots />
               </div>
               <form onSubmit={handleSubmitForm}>
                 <input
