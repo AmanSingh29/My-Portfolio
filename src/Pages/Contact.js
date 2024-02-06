@@ -45,7 +45,7 @@ const Contact = () => {
     const fullName = nameRef.current.value;
     const email = mailRef.current.value;
     const message = msgRef.current.value;
-    fetch("http://localhost:5000/api/send-message", {
+    fetch("https://portfolio-navy-theta-83.vercel.app/api/send-message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
