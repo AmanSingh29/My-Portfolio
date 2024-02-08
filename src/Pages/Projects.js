@@ -37,7 +37,7 @@ const Projects = () => {
           </div>
           <div className={styles.projectCont}>
             <div className={styles.projectImg} data-aos="zoom-in">
-              <img src={weTweetImg} />
+              <img src={weTweetImg} alt="we-tweet" />
             </div>
             <div className={styles.projectDetails} data-aos="fade-left">
               <div className={styles.projectTitle}>
@@ -90,7 +90,7 @@ const Projects = () => {
           </div>
           <div className={`${styles.projectCont} ${styles.reverse}`}>
             <div className={styles.projectImg} data-aos="zoom-in">
-              <img src={ECommImg} />
+              <img src={ECommImg} alt="ecomm" />
             </div>
             <div className={styles.projectDetails} data-aos="fade-right">
               <div className={styles.projectTitle}>
@@ -156,7 +156,7 @@ const Projects = () => {
           </div>
           <div className={styles.projectCont}>
             <div className={styles.projectImg} data-aos="zoom-in">
-              <img src={EComm2Img} />
+              <img src={EComm2Img} alt="ecomm2" />
             </div>
             <div className={styles.projectDetails} data-aos="fade-left">
               <div className={styles.projectTitle}>
